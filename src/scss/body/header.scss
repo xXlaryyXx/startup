@@ -1,0 +1,91 @@
+.header {
+    &__inner {
+        padding: 19px;
+        background: #fff;
+        box-shadow: 0 0 10px #333;
+
+        position: fixed;
+        width: 100%;
+
+        & .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            display: block;
+            width: 118px;
+            height: 39px;
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__nav {
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 1.2px;
+            color: #77838F;
+        }
+
+        &-item {
+            position: relative;
+            min-width: 100px; 
+
+            &  ul {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                z-index: -1;
+                display: flex;
+                flex-direction: column;
+                background: #fff;
+                width: 100%;
+                transition: all .3s ease;
+                visibility: hidden;
+
+                & ul {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                }
+            }
+            
+            &:hover {
+                & > ul{
+                   visibility: visible;
+                }
+            }
+
+        }
+
+        &-link {
+            display: block;
+            width: 100%;
+            line-height: 30px;
+        }
+
+        &-link.list{
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 11px;
+                height: 11px;
+                background: url("../../img/ico/arr.svg") center no-repeat;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+
+}
