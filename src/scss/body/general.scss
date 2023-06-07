@@ -1,12 +1,73 @@
+@import './body/animation.scss';
+
 .btn {
-    
+
     background: #2e3d7a;
     border-radius: 4px;
     padding: 12px 15px;
     color: #fff;
     transition: all .3s ease;
-    
+
     &:hover {
         background: #142D71;
+    }
+}
+
+.burger {
+    position: relative;
+    cursor: pointer;
+
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 319px) {
+        display: block;
+    }
+
+    & div {
+        height: 2px;
+        background: hsl(0, 0%, 20%);
+
+        position: absolute;
+        left: 0;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            width: 100%;
+        }
+
+        &:nth-child(1) {
+            animation: burgerRotateRev .3s ease reverse forwards, burgerTo50Rev .3s ease reverse .4s forwards;
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            animation: withTo0Rev .3s ease .3s forwards reverse;
+            top: 50%;
+        }
+
+        &:nth-child(3) {
+            animation: burgerRotateBotRev .3s ease reverse forwards, burgerTo50BotRev .3s ease reverse .4s forwards;
+            top: 100%;
+        }
+
+    }
+
+    &.active div {
+        &:nth-child(1) {
+            animation: burgerTo50 .3s ease forwards, burgerRotate .3s ease .4s forwards;
+        }
+
+        &:nth-child(2) {
+            animation: withTo0 .3s ease forwards;
+        }
+
+        &:nth-child(3) {
+            animation: burgerTo50Bot .3s ease forwards, burgerRotateBot .3s ease .4s forwards;
+        }
     }
 }

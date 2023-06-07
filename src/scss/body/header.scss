@@ -22,10 +22,17 @@
     }
 
     &__nav {
+        @media screen and (min-width: 769px) {
+            display: block;
+        }
+
+        @media screen and (min-width: 320px) {
+            display: none;
+        }
         &-list {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 10px;
 
             font-size: 16px;
             line-height: 22px;
@@ -74,7 +81,6 @@
         &-link.list{
             display: inline-flex;
             align-items: center;
-            justify-content: space-between;
 
             &::after {
                 content: "";

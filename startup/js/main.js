@@ -8715,7 +8715,16 @@ function EffectCards({
 //         }
 //     },
 // })
+;// CONCATENATED MODULE: ./src/js/modeles/general.js
+let burger = document.querySelector("#burger");
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    burger.addEventListener("click", ()=> {
+        burger.classList.toggle("active");
+    })
+})
 ;// CONCATENATED MODULE: ./src/js/main.js
+
 
 
 

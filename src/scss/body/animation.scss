@@ -1,0 +1,109 @@
+@keyframes burgerTo50 {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes burgerTo50Rev {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes burgerRotate {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: 50%;
+        rotate: 45deg;
+    }
+}
+
+@keyframes burgerRotateRev {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: 50%;
+        rotate: 45deg;
+    }
+}
+
+@keyframes withTo0 {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 50%;
+    }
+}
+
+@keyframes withTo0Rev {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 50%;
+    }
+}
+
+@keyframes burgerTo50Bot {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes burgerTo50BotRev {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes burgerRotateBot {
+    0% {
+        top: 50%;
+        rotate: 0deg;
+    }
+
+    100% {
+        top: 50%;
+        rotate: -45deg;
+    }
+}
+
+@keyframes burgerRotateBotRev {
+    0% {
+        top: 50%;
+        rotate: 0deg;
+    }
+
+    100% {
+        top: 50%;
+        rotate: -45deg;
+    }
+}

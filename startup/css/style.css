@@ -246,7 +246,7 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 1.2px;
@@ -302,9 +302,6 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .header__nav-link.list::after {
@@ -314,6 +311,226 @@ html {
   height: 11px;
   background: url("../../img/ico/arr.svg") center no-repeat;
   margin: 0 0 0 10px;
+}
+
+@-webkit-keyframes burgerTo50 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes burgerTo50Rev {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50Rev {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes burgerRotate {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes burgerRotate {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@-webkit-keyframes burgerRotateRev {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes burgerRotateRev {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@-webkit-keyframes withTo0 {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@keyframes withTo0 {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes withTo0Rev {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@keyframes withTo0Rev {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes burgerTo50Bot {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50Bot {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes burgerTo50BotRev {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50BotRev {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes burgerRotateBot {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
+}
+
+@keyframes burgerRotateBot {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
+}
+
+@-webkit-keyframes burgerRotateBotRev {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
+}
+
+@keyframes burgerRotateBotRev {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
 }
 
 .btn {
@@ -328,4 +545,185 @@ html {
 
 .btn:hover {
   background: #142D71;
+}
+
+.burger {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.burger div {
+  height: 2px;
+  background: hsl(0, 0%, 20%);
+  position: absolute;
+  left: 0;
+}
+
+.burger div:nth-child(1),
+.burger div:nth-child(3) {
+  width: 100%;
+}
+
+.burger div:nth-child(1) {
+  animation: burgerRotateRev 0.3s ease reverse forwards, burgerTo50Rev 0.3s ease reverse 0.4s forwards;
+  top: 0;
+}
+
+.burger div:nth-child(2) {
+  animation: withTo0Rev 0.3s ease 0.3s forwards reverse;
+  top: 50%;
+}
+
+.burger div:nth-child(3) {
+  animation: burgerRotateBotRev 0.3s ease reverse forwards, burgerTo50BotRev 0.3s ease reverse 0.4s forwards;
+  top: 100%;
+}
+
+.burger.active div:nth-child(1) {
+  -webkit-animation: burgerTo50 0.3s ease forwards, burgerRotate 0.3s ease 0.4s forwards;
+  animation: burgerTo50 0.3s ease forwards, burgerRotate 0.3s ease 0.4s forwards;
+}
+
+.burger.active div:nth-child(2) {
+  -webkit-animation: withTo0 0.3s ease forwards;
+  animation: withTo0 0.3s ease forwards;
+}
+
+.burger.active div:nth-child(3) {
+  -webkit-animation: burgerTo50Bot 0.3s ease forwards, burgerRotateBot 0.3s ease 0.4s forwards;
+  animation: burgerTo50Bot 0.3s ease forwards, burgerRotateBot 0.3s ease 0.4s forwards;
+}
+
+@keyframes burgerTo50 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50Rev {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerRotate {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes burgerRotateRev {
+  0% {
+    top: 50%;
+  }
+
+  100% {
+    top: 50%;
+    rotate: 45deg;
+  }
+}
+
+@keyframes withTo0 {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@keyframes withTo0Rev {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+@keyframes burgerTo50Bot {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerTo50BotRev {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes burgerRotateBot {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
+}
+
+@keyframes burgerRotateBotRev {
+  0% {
+    top: 50%;
+    rotate: 0deg;
+  }
+
+  100% {
+    top: 50%;
+    rotate: -45deg;
+  }
+}
+
+@media screen and (min-width: 319px) {
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__nav {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
 }
